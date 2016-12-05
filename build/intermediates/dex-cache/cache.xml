@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.1_c6c405ae4f191a9549fed1b2c670d1f57039003d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_9ba610d88ca594c3d23e86aa011379c255558f6c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.0.1_788ebd3da60b03bf0e0fab65e200f9b4d5f65e9e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.1_98952d55c4caefcf97558e2ef116404566a29baf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.1_7bf5fe77b443c25bf49d770c0de926bbd194ca1a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.1_811ee34cc06d9fde0b183c64cd16d3c2c7f11a68/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b1172108b176ffcd42ec0892bc925792f4fd3ee3">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4fc5a1eaa75755118523588e07fbc8b98bc2af49/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.0.1_8ad210a8ee7a9a8544770b843c2e1ed1573ea2bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.1_5ba4d77744e9842d33feef47a4201d38795f158e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.1_38a7d872a68158eb4356a9be41c5de1513e2eeb8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_a998aca95ad3fe8fc03befe1ff541adbddbf7ccc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.1_139149982e06f8c3baf78ba131117c9e5679df43/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_31b668f03951959ed8c580d88c2b9e9312f60cdd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.1_e848ff9b8ca5e5497e330d1fe2f9d8efe10fb1e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.1_ffe051e38314dfbed05cf89b21ebceb6346b8f67/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.0.1_7e01b1378131d26ca2dbe7c5405c094e6b4d0e7c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.1_09ab155ad3a9850e878332550c62e8f9eef9f367/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_7c98e0cbb1b1d8e21ad9b34506ec9b9361273f1b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="37d342c9f053bbf987015d344324b9a7747b86ab">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b898637878d757ac1a3d47983c4e33fe0c6fea5b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/home/leonie/Downloads/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_d773ab53af547380d2f8c789a54ae1bbcc4fddbc/classes.dex" />
+    </item>
+
+</items>
