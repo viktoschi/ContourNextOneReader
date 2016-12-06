@@ -134,7 +134,7 @@ public class BGMeterGattService extends Service{
     }
 
     public class LocalBinder extends Binder {
-        BGMeterGattService getService() {
+        public BGMeterGattService getService() {
             return BGMeterGattService.this;
         }
     }
@@ -214,8 +214,8 @@ public class BGMeterGattService extends Service{
             return false;
         }
         // We want to directly connect to the device, so we are setting the autoConnect
-        // parameter to false.
-        mBluetoothGatt = device.connectGatt(this, false, mGattCallback);
+        // parameter to true.
+        mBluetoothGatt = device.connectGatt(this, true, mGattCallback);
         Log.d(TAG, "Trying to create a new connection.");
         mBluetoothDeviceAddress = address;
         mConnectionState = STATE_CONNECTING;

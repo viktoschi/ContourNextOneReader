@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="f57d4772f247a9222dc92723c1de024361a313b9">
+        sha1="402a324139066424974ea416b8a058b41e53c606">
         <dex dex="/home/leonie/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_620a2df5f750e86c6c3c6bfafbebb7d1f2e6f967/classes.dex" />
     </item>
     <item
@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="afd60d1c90e24abcd3a763c155133497bda59619">
+        sha1="33dd93a45d48716605b1076cc016dd3bd2035a70">
         <dex dex="/home/leonie/ContourNextOneReader/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1e0e3419865c3da5b59bf347a8b567bca35b2a07/classes.dex" />
     </item>
     <item
