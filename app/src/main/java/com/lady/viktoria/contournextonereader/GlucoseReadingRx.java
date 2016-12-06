@@ -23,12 +23,11 @@ public class GlucoseReadingRx {
     public int second;
     public int offset;
     public float kgl;
-    public float mol;
+    public float mmol;
     public double mgdl;
     public long time;
     public int sampleType;
     public int sampleLocation;
-
 
     public GlucoseReadingRx(byte[] packet) {
         if (packet.length >= 14) {
@@ -59,8 +58,8 @@ public class GlucoseReadingRx {
                 kgl = getSfloat16(data.get(ptr), data.get(ptr + 1));
                 mgdl = kgl * 100000;
             } else {
-                mol = getSfloat16(data.get(ptr), data.get(ptr + 1));
-                mgdl = mol * 1000 * MMOLL_TO_MGDL;
+                mmol = getSfloat16(data.get(ptr), data.get(ptr + 1));
+                mgdl = mmol * 1000 * MMOLL_TO_MGDL;
             }
             ptr += 2;
 
@@ -78,13 +77,13 @@ public class GlucoseReadingRx {
     }
 
     public String toString() {
-        return "Glucose data: mg/dl: " + mgdl + "  mmol/l: " + mol + "  kg/l: " + kgl
+        return "Glucose data: mg/dl: " + mgdl + "  mmol/l: " + mmol + "  kg/l: " + kgl
                 + "  seq:" + sequence + " sampleType: " + sampleType + "  sampleLocation: " + sampleLocation + "  time: " + hour + ":" + minute + ":" + second
                 + "  " + day + "-" + month + "-" + year + " timeoffset: " + offset + " timestamp: " + time;
     }
 
     public String toStringFormatted() {
-        return "Glucose data:\nmg/dl: " + mgdl + "\nmmol/l: " + mol + "\nkg/l: " + kgl
+        return "Glucose data:\nmg/dl: " + mgdl + "\nmmol/l: " + mmol + "\nkg/l: " + kgl
                 + "\nseq:" + sequence + "\nsampleType: " + sampleType + "\nsampleLocation: " + sampleLocation + "\ntime: " + hour + ":" + minute + ":" + second
                 + "  " + day + "-" + month + "-" + year + "\ntimeoffset: " + offset + "\ntimestamp: " + time;
     }

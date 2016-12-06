@@ -1,8 +1,6 @@
 package com.lady.viktoria.contournextonereader;
 
 import android.app.Activity;
-import android.bluetooth.BluetoothGattCharacteristic;
-import android.bluetooth.BluetoothGattService;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -14,22 +12,11 @@ import android.os.IBinder;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
 import android.widget.TextView;
-
 import com.lady.viktoria.contournextonereader.services.BGMeterGattService;
-import com.lady.viktoria.contournextonereader.services.GattAttributes;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-
-import static android.content.ContentValues.TAG;
-import static com.lady.viktoria.contournextonereader.services.BGMeterGattService.ACTION_GATT_SERVICES_DISCOVERED;
-
 
 public class MainActivity extends Activity implements View.OnClickListener {
+    private final static String TAG = MainActivity.class.getSimpleName();
 
     Button btnAct;
     TextView bgmac;
@@ -40,9 +27,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private TextView mConnectionState;
     private boolean mConnected = false;
     private TextView mDataField;
-
-
-
 
     // Code to manage Service lifecycle.
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -64,9 +48,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     };
 
-
-
     private final BroadcastReceiver mGattUpdateReceiver = new BroadcastReceiver() {
+
         @Override
         public void onReceive(Context context, Intent intent) {
             final String action = intent.getAction();
@@ -84,8 +67,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     };
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,20 +79,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
         mDataField = (TextView) findViewById(R.id.bgreading);
 
-
-
         try {
             b = getIntent().getExtras();
             deviceBTMAC = b.getString("BG Meter MAC Address");
             Log.v("deviceBTMAC", deviceBTMAC);
             bgmac.setText("BGMeter MAC: " + deviceBTMAC);
             mDeviceAddress = deviceBTMAC;
-
         }
         catch (Exception e) {
             Log.v("try_catch", "Error " + e.getMessage());
         }
-
     }
 
     @Override
@@ -147,7 +124,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         final IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(BGMeterGattService.ACTION_GATT_CONNECTED);
         intentFilter.addAction(BGMeterGattService.ACTION_GATT_DISCONNECTED);
-        intentFilter.addAction(ACTION_GATT_SERVICES_DISCOVERED);
         intentFilter.addAction(BGMeterGattService.ACTION_DATA_AVAILABLE);
         return intentFilter;
     }
@@ -164,7 +140,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
-
     private void updateConnectionState(final int resourceId) {
         runOnUiThread(new Runnable() {
             @Override
@@ -173,5 +148,4 @@ public class MainActivity extends Activity implements View.OnClickListener {
             }
         });
     }
-
 }

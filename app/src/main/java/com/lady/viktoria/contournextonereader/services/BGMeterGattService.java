@@ -1,6 +1,5 @@
 package com.lady.viktoria.contournextonereader.services;
 
-
 import android.app.Service;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -16,11 +15,9 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
-
-import com.lady.viktoria.contournextonereader.GlucoseReadingRx;
-
 import java.util.List;
 import java.util.UUID;
+import com.lady.viktoria.contournextonereader.GlucoseReadingRx;
 
 public class BGMeterGattService extends Service{
     private final static String TAG = BGMeterGattService.class.getSimpleName();
@@ -30,7 +27,6 @@ public class BGMeterGattService extends Service{
     private String mBluetoothDeviceAddress;
     private BluetoothGatt mBluetoothGatt;
     private int mConnectionState = STATE_DISCONNECTED;
-
     private static final int STATE_DISCONNECTED = 0;
     private static final int STATE_CONNECTING = 1;
     private static final int STATE_CONNECTED = 2;
@@ -113,9 +109,9 @@ public class BGMeterGattService extends Service{
                                  final BluetoothGattCharacteristic characteristic) {
         final Intent intent = new Intent(action);
 
-        // This is special handling for the Heart Rate Measurement profile.  Data parsing is
+        // This is special handling for the Glucose Measurement profile.  Data parsing is
         // carried out as per profile specifications:
-        // http://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_measurement.xml
+        // https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.glucose_measurement.xml
         if (UUID_BG_MEASUREMENT.equals(characteristic.getUuid())) {
             GlucoseReadingRx gtb = new GlucoseReadingRx(characteristic.getValue());
             Log.d(TAG,"Result: "+gtb.toString());
@@ -177,7 +173,6 @@ public class BGMeterGattService extends Service{
             Log.e(TAG, "Unable to obtain a BluetoothAdapter.");
             return false;
         }
-
         return true;
     }
 
@@ -278,7 +273,7 @@ public class BGMeterGattService extends Service{
         }
         mBluetoothGatt.setCharacteristicNotification(characteristic, enabled);
 
-        // This is specific to Heart Rate Measurement.
+        // This is specific to Glucose Measurement.
         if (UUID_BG_MEASUREMENT.equals(characteristic.getUuid())) {
             BluetoothGattDescriptor descriptor = characteristic.getDescriptor(
                     UUID.fromString(GattAttributes.CLIENT_CHARACTERISTIC_CONFIG));

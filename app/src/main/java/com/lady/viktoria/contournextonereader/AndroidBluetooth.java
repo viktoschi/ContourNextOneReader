@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-
 public class AndroidBluetooth extends Activity {
 
     private static final int REQUEST_ENABLE_BT = 1;
@@ -22,13 +21,9 @@ public class AndroidBluetooth extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bgmeter);
-
-
         stateBluetooth = (TextView)findViewById(R.id.bluetoothstate);
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
         CheckBlueToothState();
-
     }
 
     private void CheckBlueToothState(){

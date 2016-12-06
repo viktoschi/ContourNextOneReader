@@ -2,7 +2,6 @@ package com.lady.viktoria.contournextonereader.services;
 
 import java.util.HashMap;
 
-
 public class GattAttributes {
     private static HashMap<String, String> attributes = new HashMap();
     public static String BG_MEASUREMENT = "00002a18-0000-1000-8000-00805f9b34fb";
