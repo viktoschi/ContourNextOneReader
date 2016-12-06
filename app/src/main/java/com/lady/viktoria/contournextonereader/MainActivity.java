@@ -1,17 +1,14 @@
 package com.lady.viktoria.contournextonereader;
 
 import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.android.bluetoothlegatt.BluetoothLeService;
+import com.lady.viktoria.contournextonereader.services.BGMeterGattService;
 
 import static android.content.ContentValues.TAG;
 
@@ -22,7 +19,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Bundle b;
     String deviceBTMAC;
     String mDeviceAddress = "00:00:00:00:00:00";
-    BluetoothLeService mBluetoothLeService;
+    BGMeterGattService mBGMeterGattService;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,7 +37,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             Log.v("old_deviceBTMAC", mDeviceAddress);
             mDeviceAddress=deviceBTMAC;
             Log.v("new_deviceBTMAC", mDeviceAddress);
-            mBluetoothLeService.connect(mDeviceAddress);
+            mBGMeterGattService.connect(mDeviceAddress);
 
         }
         catch (Exception e) {
