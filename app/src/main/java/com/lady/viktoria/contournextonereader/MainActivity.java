@@ -1,6 +1,8 @@
 package com.lady.viktoria.contournextonereader;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattService;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -12,12 +14,19 @@ import android.os.IBinder;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.SimpleExpandableListAdapter;
+
 import android.widget.TextView;
 
 import com.lady.viktoria.contournextonereader.services.BGMeterGattService;
+import com.lady.viktoria.contournextonereader.services.GattAttributes;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 import static android.content.ContentValues.TAG;
+import static com.lady.viktoria.contournextonereader.services.BGMeterGattService.ACTION_GATT_SERVICES_DISCOVERED;
 
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -29,7 +38,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
     String mDeviceAddress = "00:00:00:00:00:00";
     BGMeterGattService mBGMeterGattService;
     private TextView mConnectionState;
-    boolean mConnected = false;
+    private boolean mConnected = false;
+    private TextView mDataField;
+
 
 
 
@@ -54,6 +65,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     };
 
 
+
     private final BroadcastReceiver mGattUpdateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -66,10 +78,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 mConnected = false;
                 updateConnectionState(R.string.disconnected);
                 invalidateOptionsMenu();
+            } else if (BGMeterGattService.ACTION_DATA_AVAILABLE.equals(action)) {
+                displayData(intent.getStringExtra(BGMeterGattService.EXTRA_DATA));
             }
         }
     };
-
 
 
 
@@ -83,6 +96,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mConnectionState = (TextView) findViewById(R.id.connection_state);
         Intent gattServiceIntent = new Intent(this, BGMeterGattService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
+        mDataField = (TextView) findViewById(R.id.bgreading);
+
+
 
         try {
             b = getIntent().getExtras();
@@ -121,11 +137,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBGMeterGattService = null;
     }
 
+    private void displayData(String data) {
+        if (data != null) {
+            mDataField.setText(data);
+        }
+    }
+
     private static IntentFilter makeGattUpdateIntentFilter() {
         final IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(BGMeterGattService.ACTION_GATT_CONNECTED);
         intentFilter.addAction(BGMeterGattService.ACTION_GATT_DISCONNECTED);
-        intentFilter.addAction(BGMeterGattService.ACTION_GATT_SERVICES_DISCOVERED);
+        intentFilter.addAction(ACTION_GATT_SERVICES_DISCOVERED);
         intentFilter.addAction(BGMeterGattService.ACTION_DATA_AVAILABLE);
         return intentFilter;
     }
