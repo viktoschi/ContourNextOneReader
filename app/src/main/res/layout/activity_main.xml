@@ -1,27 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <Button
-        android:id="@+id/listpaireddevices"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Connect to Paired Device"
-        android:enabled="true" />
-
     <TextView
         android:text="BG Meter MAC"
-        android:layout_width="match_parent"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:id="@+id/bgmac" />
 
-    <TextView
-        android:label="Connection Status"
+    <Button
+        android:id="@+id/listpaireddevices"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/connection_state" />
+        android:text="Connect to Paired Device"
+        android:enabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="BG Reading"
+        android:textSize="25pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bgreading" />
+
+    <TextView
+        android:text="Disconnected"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/connection_state"
+        android:layout_below="@+id/connectionstatus_label"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Connection Status:"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/connectionstatus_label"
+        android:labelFor="@+id/connection_state"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/connection_state" />
 
 
-</LinearLayout>
+</RelativeLayout>
