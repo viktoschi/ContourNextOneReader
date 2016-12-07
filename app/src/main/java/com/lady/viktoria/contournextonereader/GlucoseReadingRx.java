@@ -56,11 +56,9 @@ public class GlucoseReadingRx {
 
             if (concentrationUnitKgL) {
                 kgl = getSfloat16(data.get(ptr), data.get(ptr + 1));
-                if (kgl < 0) {kgl= Math.abs(kgl);}
                 mgdl = kgl * 100000;
             } else {
                 mmol = getSfloat16(data.get(ptr), data.get(ptr + 1));
-                if (mmol < 0) {mmol= Math.abs(mmol);}
                 mgdl = mmol * 1000 * MMOLL_TO_MGDL;
             }
             ptr += 2;
@@ -90,10 +88,15 @@ public class GlucoseReadingRx {
                 + "  " + day + "-" + month + "-" + year + "\ntimeoffset: " + offset + "\ntimestamp: " + time;
     }
 
-    private float getSfloat16(int b0, int b1) {
-        final int mantissa = unsignedToSigned(b0 + ((b1 & 0x0F) << 8), 12);
-        final int exponent = unsignedToSigned(b1 >> 4, 4);
+    private float getSfloat16(byte b0, byte b1) {
+        int mantissa = unsignedToSigned(unsignedByteToInt(b0)
+                + ((unsignedByteToInt(b1) & 0x0F) << 8), 12);
+        int exponent = unsignedToSigned(unsignedByteToInt(b1) >> 4, 4);
         return (float) (mantissa * Math.pow(10, exponent));
+    }
+
+    private int unsignedByteToInt(byte b) {
+        return b & 0xFF;
     }
 
     private int unsignedToSigned(int unsigned, int size) {
