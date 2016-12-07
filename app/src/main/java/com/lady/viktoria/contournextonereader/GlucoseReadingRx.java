@@ -56,9 +56,11 @@ public class GlucoseReadingRx {
 
             if (concentrationUnitKgL) {
                 kgl = getSfloat16(data.get(ptr), data.get(ptr + 1));
+                if (kgl < 0) {kgl= Math.abs(kgl);}
                 mgdl = kgl * 100000;
             } else {
                 mmol = getSfloat16(data.get(ptr), data.get(ptr + 1));
+                if (mmol < 0) {mmol= Math.abs(mmol);}
                 mgdl = mmol * 1000 * MMOLL_TO_MGDL;
             }
             ptr += 2;
